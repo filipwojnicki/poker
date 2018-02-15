@@ -1,0 +1,60 @@
+<div ng-controller="gameController">
+	{{ message }} <a href="#mygames" ng-show="errorShow" >wróć</a> 
+	<div class="game">
+		{{ gameData.msg }}<br>
+
+		{{ gameData.player1.name }}	<br>
+		<div class="row">
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.player1.card1.symbol}}/{{gameData.player1.card1.color}}{{gameData.player1.card1.symbol}}.png" alt="{{gameData.player1.card1.color}}" style="width: 80%;" />
+			</div>
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.player1.card2.symbol}}/{{gameData.player1.card2.color}}{{gameData.player1.card2.symbol}}.png" alt="{{gameData.player1.card2.color}}" style="width: 80%;" />
+			</div>
+		</div> <br>
+
+		<div class="row">
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.table.card1.symbol}}/{{gameData.table.card1.color}}{{gameData.table.card1.symbol}}.png" alt="{{gameData.table.card1.color}}" style="width: 80%;" />
+			</div>
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.table.card2.symbol}}/{{gameData.table.card2.color}}{{gameData.table.card2.symbol}}.png" alt="{{gameData.table.card2.color}}" style="width: 80%;" />
+			</div>
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.table.card3.symbol}}/{{gameData.table.card3.color}}{{gameData.table.card3.symbol}}.png" alt="{{gameData.table.card3.color}}" style="width: 80%;" />
+			</div>
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.table.card4.symbol}}/{{gameData.table.card4.color}}{{gameData.table.card4.symbol}}.png" alt="{{gameData.table.card4.color}}" style="width: 80%;" />
+			</div>
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.table.card5.symbol}}/{{gameData.table.card5.color}}{{gameData.table.card5.symbol}}.png" alt="{{gameData.table.card5.color}}" style="width: 80%;" />
+			</div>
+		</div> <br>
+
+
+		{{ gameData.player2.name }}	<br>
+		<div class="row">
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.player2.card1.symbol}}/{{gameData.player2.card1.color}}{{gameData.player2.card1.symbol}}.png" alt="{{gameData.player2.card1.color}}" style="width: 80%;" />
+			</div>
+			<div class="col-md-2">
+				<img class="rounded img-fluid" src="cards/{{gameData.player2.card2.symbol}}/{{gameData.player2.card2.color}}{{gameData.player2.card2.symbol}}.png" alt="{{gameData.player2.card2.color}}" style="width: 80%;" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2">
+				<button class="btn btn-default game-butt" ng-click="fold()">Poddaj</button>
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-default game-butt" ng-click="call()">Czekaj</button>
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-default game-butt disabled" ng-click="" >Obstaw</button>
+			</div>
+		</div>	
+
+		
+	</div>
+
+</div>

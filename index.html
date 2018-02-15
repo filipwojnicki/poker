@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pl" ng-app="poker">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Poker</title>
+
+	<!-- <base href="/"> -->
+
+	<!-- FAVICON -->
+	<link href="favicon.ico" rel="icon" type="image/x-icon" />
+	
+	<!-- CSS -->
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- ANIMATE.CSS -->
+	<link rel="stylesheet" href="css/animate.css">
+
+	<!-- BOOTSTRAP 3.3.7 -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- JS -->
+
+	<!-- Angular 1.6.4 -->
+	<script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+
+    <!-- Jquery 3.2.1 -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP 3.3.7 JS -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- TOASTER ALERTS  -->
+	<script src="js/jquery.toaster.js"></script>
+	
+	<!-- PACE -->
+	<script data-pace-options='{ "ajax": false }' src="js/pace.min.js"></script
+
+	<!-- SITE JS FILES -->
+	<script src="js/main.js"></script>
+
+	<script type="text/javascript"> 
+		$(document).ready(function () {
+			$('#showOnLoad').fadeIn(200);
+		});
+
+		paceOptions = {
+		  ajax: false, // disabled
+		  document: false, // disabled
+		  eventLag: false, // disabled
+		  elements: {
+		    selectors: ['.my-page']
+		  }
+		};
+	</script>
+</head>
+<body id="showOnLoad" class="animated bounceInLeft">
+
+	<nav class="navbar sticky-top navbar-default navbar-inverse bg-faded" ng-controller="navController">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/">Poker</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li ng-class="{active:isActive('/')}">
+					<a href="#/">Home</a>
+				</li>
+				<li ng-class="{active:isActive('/mygames')}">
+					<a href="#mygames">My Games</a>
+				</li>
+				<li ng-class="{active:isActive('/tables')}">
+					<a href="#tables">Tables</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div ng-view></div>
+	</div>
+
+	<!-- <footer class="navbar navbar-fixed-bottom text-center text-white"> -->
+		<!-- <span class=" ">Poker &copy Filip Wojnicki</span> -->
+	<!-- </footer> -->
+</body>
+</html>
